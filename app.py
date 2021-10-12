@@ -5,9 +5,6 @@ import os
 import pickle
 import warnings
 
-var = st.beta_set_page_config
-
-
 def load_model(modelfile):
     loaded_model = pickle.load(open(modelfile, 'rb'))
     return loaded_model
