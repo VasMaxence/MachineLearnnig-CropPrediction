@@ -21,19 +21,7 @@ def main():
 
     col1, col2 = st.beta_columns([2, 2])
 
-    with col1:
-        with st.beta_expander(" ℹ️ Information", expanded=True):
-            st.write("""
-            Crop recommendation is one of the most important aspects of precision agriculture. Crop recommendations are based on a number of factors. Precision agriculture seeks to define these criteria on a site-by-site basis in order to address crop selection issues. While the "site-specific" methodology has improved performance, there is still a need to monitor the systems' outcomes.Precision agriculture systems aren't all created equal. 
-            However, in agriculture, it is critical that the recommendations made are correct and precise, as errors can result in significant material and capital loss.
-            """)
-        '''
-        ## How does it work ❓ 
-        Complete all the parameters and the machine learning model will predict the most suitable crops to grow in a particular farm based on various parameters
-        '''
-
     with col2:
-        st.subheader(" Find out the most suitable crop to grow in your farm 👨‍🌾")
         N = st.number_input("Nitrogen", 1, 10000)
         P = st.number_input("Phosporus", 1, 10000)
         K = st.number_input("Potassium", 1, 10000)
@@ -53,14 +41,6 @@ def main():
 		    ''')
             col1.success(f"{prediction.item().title()} are recommended by the A.I for your farm.")
     # code for html ☘️ 🌾 🌳 👨‍🌾  🍃
-
-    st.warning("Note: This A.I application is for educational/demo purposes only and cannot be relied upon.")
-    hide_menu_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    </style>
-    """
-
 
 hide_menu_style = """
         <style>
