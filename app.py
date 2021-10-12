@@ -42,6 +42,7 @@ def main():
         ph = st.number_input("Ph", 0.0, 100000.0)
         rainfall = st.number_input("Rainfall in mm", 0.0, 100000.0)
 
+
         feature_list = [N, P, K, temp, humidity, ph, rainfall]
         single_pred = np.array(feature_list).reshape(1, -1)
 
